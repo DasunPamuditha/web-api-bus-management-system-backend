@@ -78,7 +78,7 @@ exports.updatePermit = async (req, res) => {
   }
 };
 
-// Get All Permits
+
 exports.getPermits = async (req, res) => {
   const { routeId, busNumber, isActive } = req.query;
 
