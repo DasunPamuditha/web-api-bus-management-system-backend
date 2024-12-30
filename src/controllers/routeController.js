@@ -1,4 +1,4 @@
-const Route = require('../../models/admin/routeModel');
+const Route = require('../models/routeModel');
 
 // Create a Route
 // controllers/admin/routeController.js
