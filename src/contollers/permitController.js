@@ -121,7 +121,7 @@ exports.deactivatePermit = async (req, res) => {
   const { id } = req.params; // `id` refers to `permitNumber`
 
   try {
-    // Find the permit by `permitNumber`
+    
     const permit = await Permit.findOne({ permitNumber: id });
     if (!permit) {
       return res.status(404).json({ message: 'Permit not found' });
