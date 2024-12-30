@@ -1,4 +1,4 @@
-const BusOperator = require('../../models/admin/busOperatorModel');
+const BusOperator = require('../models/busOperatorModel');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 

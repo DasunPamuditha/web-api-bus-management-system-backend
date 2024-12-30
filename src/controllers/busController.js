@@ -1,5 +1,5 @@
-const Bus = require('../../models/admin/busModel');
-const BusOperator = require('../../models/admin/busOperatorModel'); // Import the BusOperator model
+const Bus = require('../models/busModel');
+const BusOperator = require('../models/busOperatorModel'); // Import the BusOperator model
 
 // Add a Bus
 exports.addBus = async (req, res) => {

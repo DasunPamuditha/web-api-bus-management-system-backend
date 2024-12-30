@@ -1,7 +1,8 @@
-const Bus = require('../../models/admin/busModel');
-const Schedule = require('../../models/admin/scheduleModel');
-const Route = require('../../models/admin/routeModel');
-const Booking = require('../../models/commuter/bookingModel');
+const Bus = require('../models/busModel');
+const Schedule = require('../models/scheduleModel');
+const Route = require('../models/routeModel');
+const Booking = require('../models/commuterSide/bookingModel');
+const sendEmail = require('../utils/email');
 const crypto = require('crypto');
 
 
@@ -157,7 +158,7 @@ const processRefund = (transactionId) => {
 };
 
 // Book a Seat with Payment
-const sendEmail = require('../../utils/sendEmail');
+
 
 exports.bookSeatWithPayment = async (req, res) => {
   const {
@@ -244,19 +245,22 @@ exports.bookSeatWithPayment = async (req, res) => {
     const emailMessage = `
       Dear ${passengerName},
 
-      Your booking has been confirmed with the following details:
-      - Bus Number: ${busNumber}
-      - Seat Number: ${seatNumber}
-      - Boarding Place: ${boardingPlace}
-      - Destination Place: ${destinationPlace}
-      - Date and Time: ${new Date(date).toLocaleString()}
-      - Price: ${price}
-      - Cancellation Token: ${cancellationToken}
+      Your booking has been confirmed!
+    
+      - Bus Reg. No: ${busNumber}
+      - Your Seat No: ${seatNumber}
+      - Onboard: ${boardingPlace}
+      - Destination: ${destinationPlace}
+      - Date & Time: ${new Date(date).toLocaleString()}
+      - Amount (LKR.): ${price}
 
-      Thank you for choosing our service.
+      - Cancellation Token (Personal): ${cancellationToken}
 
-      Regards,
-      Your Bus Booking Team
+      Thank you for choosing us. Have a nice day!
+
+      Best regards,
+      National Transportation Service,
+      Sri Lanka.
     `;
 
     await sendEmail(email, emailSubject, emailMessage);

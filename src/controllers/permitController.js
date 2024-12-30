@@ -1,6 +1,6 @@
-const Permit = require('../../models/admin/permitModel');
-const Bus = require('../../models/admin/busModel');
-const Route = require('../../models/admin/routeModel');
+const Permit = require('../models/permitModel');
+const Bus = require('../models/busModel');
+const Route = require('../models/routeModel');
 
 exports.issuePermit = async (req, res) => {
   const { permitNumber, busNumber, routeId, validFrom, validTo } = req.body;

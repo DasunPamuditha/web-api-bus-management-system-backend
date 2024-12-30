@@ -1,6 +1,6 @@
-const Schedule = require('../../models/admin/scheduleModel');
-const Bus = require('../../models/admin/busModel');
-const Booking = require('../../models/commuter/bookingModel');
+const Schedule = require('../models/scheduleModel');
+const Bus = require('../models/busModel');
+const Booking = require('../models/commuterSide/bookingModel');
 
 // View schedules for operator's buses
 exports.getSchedulesForOperator = async (req, res) => {

@@ -1,21 +1,34 @@
 {
-  "name": "transport-management-system-backend",
+  "name": "ntc-api",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "RESTful API for National Transport Commission seat reservation system",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "nodejs",
+    "api",
+    "mongodb",
+    "restful",
+    "jwt",
+    "seat-reservation"
+  ],
+  "author": "Dasun",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.9.2"
+    "mongoose": "^8.9.2",
+    "nodemailer": "^6.9.16",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"

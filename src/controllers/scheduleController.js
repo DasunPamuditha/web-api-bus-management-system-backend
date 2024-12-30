@@ -1,7 +1,7 @@
-const Schedule = require('../../models/admin/scheduleModel');
-const Bus = require('../../models/admin/busModel');
-const Route = require('../../models/admin/routeModel');
-const Permit = require('../../models/admin/permitModel');
+const Schedule = require('../models/scheduleModel');
+const Bus = require('../models/busModel');
+const Route = require('../models/routeModel');
+const Permit = require('../models/permitModel');
 
 exports.createSchedule = async (req, res) => {
   const { scheduleId, routeId, busNumber, startPoint, endPoint, startTime, endTime, stops, days } = req.body;

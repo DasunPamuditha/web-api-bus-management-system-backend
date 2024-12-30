@@ -1,4 +1,4 @@
-const BusOperator = require('../../models/admin/busOperatorModel');
+const BusOperator = require('../models/busOperatorModel');
 
 // Add Bus Operator
 const bcrypt = require('bcryptjs');
