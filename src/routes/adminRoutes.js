@@ -34,10 +34,10 @@ module.exports = router;
  *             properties:
  *               username:
  *                 type: string
- *                 example: admin123
+ *                 example: admin_user
  *               password:
  *                 type: string
- *                 example: password123
+ *                 example: securePass@123
  *     responses:
  *       200:
  *         description: Successful login
@@ -48,7 +48,7 @@ module.exports = router;
  *               properties:
  *                 token:
  *                   type: string
- *                   example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+ *                   example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.sampleToken...
  *       400:
  *         description: Invalid credentials
  *         content:
@@ -58,10 +58,8 @@ module.exports = router;
  *               properties:
  *                 message:
  *                   type: string
- *                   example: Invalid credentials
+ *                   example: Username or password is incorrect
  */
-
-
 /**
  * @swagger
  * /tp/admin/profile:
@@ -80,24 +78,24 @@ module.exports = router;
  *               properties:
  *                 _id:
  *                   type: string
- *                   example: 67687a55c209db5463aaa4c2
+ *                   example: 12345abcd67890ef12345678
  *                 username:
  *                   type: string
- *                   example: admin123
+ *                   example: admin_user
  *                 role:
  *                   type: string
- *                   example: admin
+ *                   example: superadmin
  *                 isActive:
  *                   type: boolean
  *                   example: true
  *                 createdAt:
  *                   type: string
  *                   format: date-time
- *                   example: 2024-12-22T10:00:00.000Z
+ *                   example: 2024-11-15T09:30:00.000Z
  *                 updatedAt:
  *                   type: string
  *                   format: date-time
- *                   example: 2024-12-22T10:00:00.000Z
+ *                   example: 2024-12-01T16:45:00.000Z
  *       401:
  *         description: Unauthorized
  *         content:
@@ -107,7 +105,7 @@ module.exports = router;
  *               properties:
  *                 message:
  *                   type: string
- *                   example: No token, authorization denied
+ *                   example: Authorization token is missing or invalid
  *       403:
  *         description: Forbidden
  *         content:
@@ -117,5 +115,5 @@ module.exports = router;
  *               properties:
  *                 message:
  *                   type: string
- *                   example: Access denied. Admins only.
+ *                   example: You do not have permission to access this resource
  */

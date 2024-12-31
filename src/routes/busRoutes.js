@@ -38,19 +38,19 @@ module.exports = router;
  *             properties:
  *               busNumber:
  *                 type: string
- *                 example: CCC-7777
+ *                 example: ABC-1234
  *               type:
  *                 type: string
  *                 enum: [Luxury, Semi-Luxury, Normal]
- *                 example: Luxury
+ *                 example: Semi-Luxury
  *               capacity:
  *                 type: integer
  *                 minimum: 10
  *                 maximum: 100
- *                 example: 50
+ *                 example: 40
  *               operatorId:
  *                 type: string
- *                 example: op-3094
+ *                 example: BO-1023
  *     responses:
  *       201:
  *         description: Bus added successfully
@@ -61,22 +61,22 @@ module.exports = router;
  *               properties:
  *                 busNumber:
  *                   type: string
- *                   example: CCC-7778
+ *                   example: ABC-1234
  *                 type:
  *                   type: string
- *                   example: Luxury
+ *                   example: Semi-Luxury
  *                 capacity:
  *                   type: integer
- *                   example: 50
+ *                   example: 40
  *                 operatorId:
  *                   type: string
- *                   example: op-3094
+ *                   example: BO-1023
  *                 isActive:
  *                   type: boolean
  *                   example: true
  *                 _id:
  *                   type: string
- *                   example: 67716428234e5865901d9f40
+ *                   example: 605c72b8e5f1234567a12345
  *                 __v:
  *                   type: integer
  *                   example: 0
@@ -112,27 +112,26 @@ module.exports = router;
  *                 properties:
  *                   busNumber:
  *                     type: string
- *                     example: CCC-7778
+ *                     example: ABC-1234
  *                   type:
  *                     type: string
- *                     example: Luxury
+ *                     example: Semi-Luxury
  *                   capacity:
  *                     type: integer
- *                     example: 50
+ *                     example: 40
  *                   operatorId:
  *                     type: string
- *                     example: op-3094
+ *                     example: BO-1023
  *                   isActive:
  *                     type: boolean
  *                     example: true
  *                   _id:
  *                     type: string
- *                     example: 67716428234e5865901d9f40
+ *                     example: 605c72b8e5f1234567a12345
  *                   __v:
  *                     type: integer
  *                     example: 0
  */
-
 
 /**
  * @swagger
@@ -148,7 +147,7 @@ module.exports = router;
  *         required: true
  *         schema:
  *           type: string
- *         description: Bus number to update
+ *         description: Bus ID to update
  *     requestBody:
  *       required: true
  *       content:
@@ -159,15 +158,15 @@ module.exports = router;
  *               type:
  *                 type: string
  *                 enum: [Luxury, Semi-Luxury, Normal]
- *                 example: Luxury
+ *                 example: Normal
  *               capacity:
  *                 type: integer
  *                 minimum: 10
  *                 maximum: 100
- *                 example: 50
+ *                 example: 60
  *               operatorId:
  *                 type: string
- *                 example: op-3094
+ *                 example: BO-1023
  *     responses:
  *       200:
  *         description: Bus updated successfully
@@ -178,25 +177,25 @@ module.exports = router;
  *               properties:
  *                 _id:
  *                   type: string
- *                   example: 67716428234e5865901d9f40
+ *                   example: 605c72b8e5f1234567a12345
  *                 busNumber:
  *                   type: string
- *                   example: CCC-7778
+ *                   example: ABC-1234
  *                 type:
  *                   type: string
- *                   example: Luxury
+ *                   example: Normal
  *                 capacity:
  *                   type: integer
- *                   example: 4
+ *                   example: 60
  *                 operatorId:
  *                   type: string
- *                   example: op-3094
+ *                   example: BO-1023
  *                 isActive:
  *                   type: boolean
  *                   example: true
  *                 __v:
  *                   type: integer
- *                   example: 0
+ *                   example: 1
  *       404:
  *         description: Bus not found
  *         content:
@@ -208,7 +207,6 @@ module.exports = router;
  *                   type: string
  *                   example: Bus not found
  */
-
 
 /**
  * @swagger
@@ -224,7 +222,7 @@ module.exports = router;
  *         required: true
  *         schema:
  *           type: string
- *         description: Bus number to deactivate
+ *         description: Bus ID to deactivate
  *     responses:
  *       200:
  *         description: Bus deactivated successfully
@@ -241,25 +239,25 @@ module.exports = router;
  *                   properties:
  *                     _id:
  *                       type: string
- *                       example: 67716428234e5865901d9f40
+ *                       example: 605c72b8e5f1234567a12345
  *                     busNumber:
  *                       type: string
- *                       example: CCC-7778
+ *                       example: ABC-1234
  *                     type:
  *                       type: string
- *                       example: Luxury
+ *                       example: Semi-Luxury
  *                     capacity:
  *                       type: integer
- *                       example: 4
+ *                       example: 40
  *                     operatorId:
  *                       type: string
- *                       example: op-3094
+ *                       example: BO-1023
  *                     isActive:
  *                       type: boolean
  *                       example: false
  *                     __v:
  *                       type: integer
- *                       example: 0
+ *                       example: 1
  *       404:
  *         description: Bus not found
  *         content:

@@ -46,20 +46,20 @@ module.exports = router;
  *             properties:
  *               operatorId:
  *                 type: string
- *                 example: op-3094
+ *                 example: BO-1023
  *               name:
  *                 type: string
- *                 example: Abhishek
+ *                 example: John Smith
  *               email:
  *                 type: string
- *                 example: mudiyansew@gmail.com
+ *                 example: john.smith@busoperators.com
  *               password:
  *                 type: string
  *                 description: Encrypted password (hashed)
- *                 example: $2a$10$9nLwBNLPqfbYlPHa0MesDe578LrJcuKJTi5Iu7KkMBDD3zuqTXF/S
+ *                 example: $2b$10$XyLBNLPjthYlPHa3MensUy45LrRrtuKTui76MaJkAAAB5guqIYZ/S
  *               nic:
  *                 type: string
- *                 example: 200018604594
+ *                 example: 987654321V
  *               role:
  *                 type: string
  *                 example: operator
@@ -73,33 +73,33 @@ module.exports = router;
  *               properties:
  *                 _id:
  *                   type: string
- *                   example: 67715caea5db55e686a429cc
+ *                   example: 605c72b8e5f1234567a12345
  *                 operatorId:
  *                   type: string
- *                   example: op-3094
+ *                   example: BO-1023
  *                 name:
  *                   type: string
- *                   example: Abhishek
+ *                   example: John Smith
  *                 email:
  *                   type: string
- *                   example: mudiyansew@gmail.com
+ *                   example: john.smith@busoperators.com
  *                 isActive:
  *                   type: boolean
  *                   example: true
  *                 nic:
  *                   type: string
- *                   example: 200018604594
+ *                   example: 987654321V
  *                 role:
  *                   type: string
  *                   example: operator
  *                 createdAt:
  *                   type: string
  *                   format: date-time
- *                   example: 2024-12-29T14:29:02.970Z
+ *                   example: 2024-12-30T10:30:15.000Z
  *                 updatedAt:
  *                   type: string
  *                   format: date-time
- *                   example: 2024-12-29T14:29:02.970Z
+ *                   example: 2024-12-30T10:30:15.000Z
  *       400:
  *         description: Operator ID, Email, or NIC already exists
  *         content:
@@ -111,7 +111,6 @@ module.exports = router;
  *                   type: string
  *                   example: Operator ID, Email, or NIC already in use
  */
-
 
 /**
  * @swagger
@@ -133,33 +132,33 @@ module.exports = router;
  *                 properties:
  *                   _id:
  *                     type: string
- *                     example: 67715caea5db55e686a429cc
+ *                     example: 605c72b8e5f1234567a12345
  *                   operatorId:
  *                     type: string
- *                     example: op-3094
+ *                     example: BO-1023
  *                   name:
  *                     type: string
- *                     example: Abhishek
+ *                     example: John Smith
  *                   email:
  *                     type: string
- *                     example: mudiyansew@gmail.com
+ *                     example: john.smith@busoperators.com
  *                   isActive:
  *                     type: boolean
  *                     example: true
  *                   nic:
  *                     type: string
- *                     example: 200018604594
+ *                     example: 987654321V
  *                   role:
  *                     type: string
  *                     example: operator
  *                   createdAt:
  *                     type: string
  *                     format: date-time
- *                     example: 2024-12-29T14:29:02.970Z
+ *                     example: 2024-12-30T10:30:15.000Z
  *                   updatedAt:
  *                     type: string
  *                     format: date-time
- *                     example: 2024-12-29T14:29:02.970Z
+ *                     example: 2024-12-30T10:30:15.000Z
  *       404:
  *         description: No bus operators found
  *         content:
@@ -171,7 +170,6 @@ module.exports = router;
  *                   type: string
  *                   example: No bus operators found
  */
-
 
 /**
  * @swagger
@@ -198,33 +196,33 @@ module.exports = router;
  *               properties:
  *                 _id:
  *                   type: string
- *                   example: 67715caea5db55e686a429cc
+ *                   example: 605c72b8e5f1234567a12345
  *                 operatorId:
  *                   type: string
- *                   example: op-3094
+ *                   example: BO-1023
  *                 name:
  *                   type: string
- *                   example: Abhishek
+ *                   example: John Smith
  *                 email:
  *                   type: string
- *                   example: mudiyansew@gmail.com
+ *                   example: john.smith@busoperators.com
  *                 isActive:
  *                   type: boolean
  *                   example: true
  *                 nic:
  *                   type: string
- *                   example: 200018604594
+ *                   example: 987654321V
  *                 role:
  *                   type: string
  *                   example: operator
  *                 createdAt:
  *                   type: string
  *                   format: date-time
- *                   example: 2024-12-29T14:29:02.970Z
+ *                   example: 2024-12-30T10:30:15.000Z
  *                 updatedAt:
  *                   type: string
  *                   format: date-time
- *                   example: 2024-12-29T14:49:47.903Z
+ *                   example: 2024-12-30T11:45:20.000Z
  *       404:
  *         description: Bus operator not found
  *         content:
@@ -237,170 +235,4 @@ module.exports = router;
  *                   example: Bus operator not found
  *       500:
  *         description: Server error
- */
-
-
-
-/**
- * @swagger
- * tp/bus-operators/update/{id}:
- *   put:
- *     summary: Update a bus operator
- *     tags: [BusOperator]
- *     security:
- *       - bearerAuth: []
- *     parameters:
- *       - in: path
- *         name: id
- *         required: true
- *         schema:
- *           type: string
- *         description: Operator ID
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             type: object
- *             properties:
- *               name:
- *                 type: string
- *                 example: Ranasinghe
- *               email:
- *                 type: string
- *                 example: mudiyansew@gmail.com
- *               isActive:
- *                 type: boolean
- *                 example: true
- *               nic:
- *                 type: string
- *                 example: 200018604594
- *               password:
- *                 type: string
- *                 description: Encrypted password (hashed)
- *                 example: $2a$10$9nLwBNLPqfbYlPHa0MesDe578LrJcuKJTi5Iu7KkMBDD3zuqTXF/S
- *     responses:
- *       200:
- *         description: Bus operator updated successfully
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 _id:
- *                   type: string
- *                   example: 67715caea5db55e686a429cc
- *                 operatorId:
- *                   type: string
- *                   example: op-3094
- *                 name:
- *                   type: string
- *                   example: Ranasinghe
- *                 email:
- *                   type: string
- *                   example: mudiyansew@gmail.com
- *                 isActive:
- *                   type: boolean
- *                   example: true
- *                 nic:
- *                   type: string
- *                   example: 200018604594
- *                 role:
- *                   type: string
- *                   example: operator
- *                 createdAt:
- *                   type: string
- *                   format: date-time
- *                   example: 2024-12-29T14:29:02.970Z
- *                 updatedAt:
- *                   type: string
- *                   format: date-time
- *                   example: 2024-12-29T14:49:47.903Z
- *       404:
- *         description: Bus operator not found
- *       500:
- *         description: Server error
- */
-
-/**
- * @swagger
- * tp/bus-operators/remove/{operatorId}:
- *   delete:
- *     summary: Deactivate a bus operator
- *     tags: [BusOperator]
- *     security:
- *       - bearerAuth: []
- *     parameters:
- *       - in: path
- *         name: operatorId
- *         required: true
- *         schema:
- *           type: string
- *         description: The operatorId of the bus operator to deactivate
- *     responses:
- *       200:
- *         description: Bus operator deactivated successfully
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 message:
- *                   type: string
- *                   example: Bus operator deactivated successfully
- *                 deactivatedOperator:
- *                   type: object
- *                   properties:
- *                     _id:
- *                       type: string
- *                       example: 676ffc34f40bf04e0efa09a4
- *                     operatorId:
- *                       type: string
- *                       example: op-3333
- *                     name:
- *                       type: string
- *                       example: Sunrise
- *                     email:
- *                       type: string
- *                       example: m@gmail.com
- *                     isActive:
- *                       type: boolean
- *                       example: false
- *                     nic:
- *                       type: string
- *                       example: 12344321v
- *                     role:
- *                       type: string
- *                       example: operator
- *                     createdAt:
- *                       type: string
- *                       format: date-time
- *                       example: 2024-12-28T13:25:08.770Z
- *                     updatedAt:
- *                       type: string
- *                       format: date-time
- *                       example: 2024-12-29T14:57:46.556Z
- *       404:
- *         description: Bus operator not found
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 message:
- *                   type: string
- *                   example: Bus operator not found
- *       500:
- *         description: Server error
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 message:
- *                   type: string
- *                   example: Error deactivating bus operator
- *                 error:
- *                   type: string
- *                   example: Detailed error message
  */

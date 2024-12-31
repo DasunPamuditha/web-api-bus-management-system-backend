@@ -41,16 +41,21 @@ module.exports = router;
  *             properties:
  *               routeId:
  *                 type: string
+ *                 example: R-001
  *               startPoint:
  *                 type: string
+ *                 example: Colombo
  *               endPoint:
  *                 type: string
+ *                 example: Galle
  *               distance:
  *                 type: number
+ *                 example: 116
  *               stops:
  *                 type: array
  *                 items:
  *                   type: string
+ *                   example: ["Kalutara", "Bentota", "Hikkaduwa"]
  *               prices:
  *                 type: array
  *                 items:
@@ -58,10 +63,13 @@ module.exports = router;
  *                   properties:
  *                     from:
  *                       type: string
+ *                       example: Colombo
  *                     to:
  *                       type: string
+ *                       example: Galle
  *                     price:
  *                       type: number
+ *                       example: 500
  *     responses:
  *       201:
  *         description: Route created successfully
@@ -102,16 +110,21 @@ module.exports = router;
  *                 properties:
  *                   routeId:
  *                     type: string
+ *                     example: R-002
  *                   startPoint:
  *                     type: string
+ *                     example: Colombo
  *                   endPoint:
  *                     type: string
+ *                     example: Jaffna
  *                   distance:
  *                     type: number
+ *                     example: 400
  *                   stops:
  *                     type: array
  *                     items:
  *                       type: string
+ *                       example: ["Vavuniya", "Kilinochchi"]
  *       404:
  *         description: No routes found
  *       500:
@@ -142,12 +155,15 @@ module.exports = router;
  *             properties:
  *               startPoint:
  *                 type: string
+ *                 example: Colombo
  *               endPoint:
  *                 type: string
+ *                 example: Kandy
  *               stops:
  *                 type: array
  *                 items:
  *                   type: string
+ *                   example: ["Peradeniya", "Kadugannawa"]
  *               prices:
  *                 type: array
  *                 items:
@@ -156,11 +172,9 @@ module.exports = router;
  *                     from:
  *                       type: string
  *                       example: Colombo
- *                       description: Starting stop
  *                     to:
  *                       type: string
  *                       example: Kandy
- *                       description: Destination stop
  *                     price:
  *                       type: number
  *                       example: 700
@@ -177,7 +191,7 @@ module.exports = router;
  *                   example: 676d6bd6952ba42c62c436eb
  *                 routeId:
  *                   type: string
- *                   example: A3
+ *                   example: R-003
  *                 startPoint:
  *                   type: string
  *                   example: Colombo
@@ -191,7 +205,7 @@ module.exports = router;
  *                   type: array
  *                   items:
  *                     type: string
- *                     example: [Kegalle, Mawanella, Peradeniya, Katugasthota]
+ *                     example: ["Peradeniya", "Kadugannawa"]
  *                 prices:
  *                   type: array
  *                   items:
@@ -202,10 +216,10 @@ module.exports = router;
  *                         example: Colombo
  *                       to:
  *                         type: string
- *                         example: Kandy
+ *                         example: Peradeniya
  *                       price:
  *                         type: number
- *                         example: 1200
+ *                         example: 300
  *       404:
  *         description: Route not found
  *       400:
@@ -213,7 +227,6 @@ module.exports = router;
  *       500:
  *         description: Server error
  */
-
 
 /**
  * @swagger
@@ -246,7 +259,7 @@ module.exports = router;
  *                   properties:
  *                     routeId:
  *                       type: string
- *                       example: A4
+ *                       example: R-004
  *                     startPoint:
  *                       type: string
  *                       example: CityA
@@ -255,12 +268,12 @@ module.exports = router;
  *                       example: CityB
  *                     distance:
  *                       type: number
- *                       example: 100
+ *                       example: 150
  *                     stops:
  *                       type: array
  *                       items:
  *                         type: string
- *                         example: [CityA, Stop1, Stop2, CityB]
+ *                         example: ["CityA", "Stop1", "Stop2", "CityB"]
  *       404:
  *         description: Route not found
  *         content:
@@ -274,4 +287,3 @@ module.exports = router;
  *       500:
  *         description: Server error
  */
-

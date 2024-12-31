@@ -44,17 +44,17 @@ module.exports = router;
  *             properties:
  *               permitNumber:
  *                 type: string
- *                 example: p-1001
+ *                 example: P-2025-001
  *               busNumber:
  *                 type: string
- *                 example: CCC-7777
+ *                 example: XYZ-1234
  *               routeId:
  *                 type: string
- *                 example: r-101
+ *                 example: R-4567
  *               validFrom:
  *                 type: string
  *                 format: date
- *                 example: 2025-01-01
+ *                 example: 2025-03-01
  *               validTo:
  *                 type: string
  *                 format: date
@@ -69,27 +69,35 @@ module.exports = router;
  *               properties:
  *                 permitNumber:
  *                   type: string
+ *                   example: P-2025-001
  *                 busNumber:
  *                   type: string
+ *                   example: XYZ-1234
  *                 routeId:
  *                   type: string
+ *                   example: R-4567
  *                 validFrom:
  *                   type: string
  *                   format: date
+ *                   example: 2025-03-01
  *                 validTo:
  *                   type: string
  *                   format: date
+ *                   example: 2025-12-31
  *                 isActive:
  *                   type: boolean
  *                   example: true
  *                 _id:
  *                   type: string
+ *                   example: 647fda3210c845e9d2b1a5b2
  *                 createdAt:
  *                   type: string
  *                   format: date-time
+ *                   example: 2025-03-01T10:00:00Z
  *                 updatedAt:
  *                   type: string
  *                   format: date-time
+ *                   example: 2025-03-01T10:00:00Z
  *       400:
  *         description: Validation error
  *         content:
@@ -124,24 +132,29 @@ module.exports = router;
  *                 properties:
  *                   permitNumber:
  *                     type: string
+ *                     example: P-2025-001
  *                   busNumber:
  *                     type: string
+ *                     example: XYZ-1234
  *                   routeId:
  *                     type: string
+ *                     example: R-4567
  *                   validFrom:
  *                     type: string
  *                     format: date
+ *                     example: 2025-03-01
  *                   validTo:
  *                     type: string
  *                     format: date
+ *                     example: 2025-12-31
  *                   isActive:
  *                     type: boolean
+ *                     example: true
  *       404:
  *         description: No permits found
  *       500:
  *         description: Server error
  */
-
 
 /**
  * @swagger
@@ -157,7 +170,7 @@ module.exports = router;
  *         required: true
  *         schema:
  *           type: string
- *         description: Permit number
+ *         description: Permit ID
  *     responses:
  *       200:
  *         description: Permit details retrieved successfully
@@ -168,29 +181,39 @@ module.exports = router;
  *               properties:
  *                 _id:
  *                   type: string
+ *                   example: 647fda3210c845e9d2b1a5b2
  *                 permitNumber:
  *                   type: string
+ *                   example: P-2025-001
  *                 busNumber:
  *                   type: string
+ *                   example: XYZ-1234
  *                 routeId:
  *                   type: object
  *                   properties:
  *                     routeId:
  *                       type: string
+ *                       example: R-4567
  *                     startPoint:
  *                       type: string
+ *                       example: Colombo
  *                     endPoint:
  *                       type: string
+ *                       example: Kandy
  *                     distance:
  *                       type: number
+ *                       example: 120
  *                 validFrom:
  *                   type: string
  *                   format: date
+ *                   example: 2025-03-01
  *                 validTo:
  *                   type: string
  *                   format: date
+ *                   example: 2025-12-31
  *                 isActive:
  *                   type: boolean
+ *                   example: true
  *       404:
  *         description: Permit not found
  *         content:
@@ -213,7 +236,6 @@ module.exports = router;
  *                   example: Error fetching permit details
  */
 
-
 /**
  * @swagger
  * /tp/admin/update-permit/{id}:
@@ -228,7 +250,7 @@ module.exports = router;
  *         required: true
  *         schema:
  *           type: string
- *         description: Permit number
+ *         description: Permit ID
  *     requestBody:
  *       required: true
  *       content:
@@ -239,13 +261,14 @@ module.exports = router;
  *               validFrom:
  *                 type: string
  *                 format: date
- *                 example: 2025-02-01
+ *                 example: 2025-04-01
  *               validTo:
  *                 type: string
  *                 format: date
  *                 example: 2025-12-31
  *               isActive:
  *                 type: boolean
+ *                 example: false
  *     responses:
  *       200:
  *         description: Permit updated successfully
@@ -256,26 +279,35 @@ module.exports = router;
  *               properties:
  *                 _id:
  *                   type: string
+ *                   example: 647fda3210c845e9d2b1a5b2
  *                 permitNumber:
  *                   type: string
+ *                   example: P-2025-001
  *                 busNumber:
  *                   type: string
+ *                   example: XYZ-1234
  *                 routeId:
  *                   type: string
+ *                   example: R-4567
  *                 validFrom:
  *                   type: string
  *                   format: date
+ *                   example: 2025-04-01
  *                 validTo:
  *                   type: string
  *                   format: date
+ *                   example: 2025-12-31
  *                 isActive:
  *                   type: boolean
+ *                   example: false
  *                 createdAt:
  *                   type: string
  *                   format: date-time
+ *                   example: 2025-03-01T10:00:00Z
  *                 updatedAt:
  *                   type: string
  *                   format: date-time
+ *                   example: 2025-04-01T12:00:00Z
  *       404:
  *         description: Permit not found
  *         content:
@@ -304,7 +336,7 @@ module.exports = router;
  *         required: true
  *         schema:
  *           type: string
- *         description: Permit number
+ *         description: Permit ID
  *     responses:
  *       200:
  *         description: Permit deactivated successfully
@@ -321,20 +353,27 @@ module.exports = router;
  *                   properties:
  *                     _id:
  *                       type: string
+ *                       example: 647fda3210c845e9d2b1a5b2
  *                     permitNumber:
  *                       type: string
+ *                       example: P-2025-001
  *                     busNumber:
  *                       type: string
+ *                       example: XYZ-1234
  *                     routeId:
  *                       type: string
+ *                       example: R-4567
  *                     validFrom:
  *                       type: string
  *                       format: date
+ *                       example: 2025-03-01
  *                     validTo:
  *                       type: string
  *                       format: date
+ *                       example: 2025-12-31
  *                     isActive:
  *                       type: boolean
+ *                       example: false
  *       404:
  *         description: Permit not found
  *         content:
