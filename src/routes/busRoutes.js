@@ -23,7 +23,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /buses:
+ * /tp/admin/buses/add:
  *   post:
  *     summary: Add a bus
  *     tags: [Bus]
@@ -94,7 +94,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /buses:
+ * /tp/admin/buses/view:
  *   get:
  *     summary: Get all buses
  *     tags: [Bus]
@@ -136,7 +136,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /buses/{id}:
+ * /tp/admin/buses/update/{id}:
  *   put:
  *     summary: Update bus details
  *     tags: [Bus]
@@ -212,7 +212,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /buses/{id}:
+ * /tp/admin/buses/remove/{id}:
  *   delete:
  *     summary: Deactivate a bus
  *     tags: [Bus]

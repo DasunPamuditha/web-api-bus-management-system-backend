@@ -29,7 +29,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /admin/permits:
+ * /tp/admin/new-permit:
  *   post:
  *     summary: Issue a permit
  *     tags: [Permit]
@@ -106,7 +106,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /admin/permits:
+ * /tp/admin/view-permit:
  *   get:
  *     summary: Get all permits
  *     tags: [Permit]
@@ -145,7 +145,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /admin/permits/{id}:
+ * /tp/admin/view-permit-id/{id}:
  *   get:
  *     summary: Get permit by ID
  *     tags: [Permit]
@@ -216,7 +216,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /admin/permits/{id}:
+ * /tp/admin/update-permit/{id}:
  *   put:
  *     summary: Update a permit
  *     tags: [Permit]
@@ -292,7 +292,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /admin/permits/{id}:
+ * /tp/admin/remove-permit/{id}:
  *   delete:
  *     summary: Deactivate a permit
  *     tags: [Permit]

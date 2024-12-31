@@ -4,14 +4,18 @@ const swaggerOptions = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'Bus Management System API',
+      title: 'Bus Management System Backend API',
       version: '1.0.0',
-      description: 'API documentation for the Bus Management System',
+      description: 'Bus Management System - API documentation',
     },
     servers: [
       {
-        url: 'http://localhost:5001',
+        url: 'http://localhost:5000',
         description: 'Local Development Server',
+      },
+      {
+        url: 'https://web-api-bus-management-system-ba-production.up.railway.app',
+        description: 'Deployed Server',
       },
     ],
     components: {
@@ -29,8 +33,7 @@ const swaggerOptions = {
       },
     ],
   },
-  apis: ['./src/routes/**/*.js'], 
-
+  apis: ['./src/routes/*/.js'], // Adjust the path to match your actual routes
 };
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
