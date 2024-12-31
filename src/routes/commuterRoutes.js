@@ -71,26 +71,36 @@ module.exports = router;
  *                     properties:
  *                       scheduleId:
  *                         type: string
+ *                         example: "sch-5678"
  *                       routeId:
  *                         type: string
+ *                         example: "r-3456"
  *                       busNumber:
  *                         type: string
+ *                         example: "XYZ-1234"
  *                       type:
  *                         type: string
+ *                         example: "Luxury"
  *                       capacity:
  *                         type: integer
+ *                         example: 45
  *                       boardingPlace:
  *                         type: string
+ *                         example: "Galle"
  *                       destinationPlace:
  *                         type: string
+ *                         example: "Matara"
  *                       price:
  *                         type: integer
+ *                         example: 1500
  *                       startTime:
  *                         type: string
  *                         format: date-time
+ *                         example: "2025-02-10T06:30:00Z"
  *                       endTime:
  *                         type: string
  *                         format: date-time
+ *                         example: "2025-02-10T08:30:00Z"
  *                       stops:
  *                         type: array
  *                         items:
@@ -98,9 +108,11 @@ module.exports = router;
  *                           properties:
  *                             stopName:
  *                               type: string
+ *                               example: "Ambalangoda"
  *                             arrivalTime:
  *                               type: string
  *                               format: date-time
+ *                               example: "2025-02-10T07:00:00Z"
  *       404:
  *         description: No buses found
  */
@@ -137,9 +149,11 @@ module.exports = router;
  *                 properties:
  *                   seatNumber:
  *                     type: integer
+ *                     example: 12
  *                   status:
  *                     type: string
  *                     enum: [Available, Booked]
+ *                     example: "Available"
  */
 
 /**
@@ -159,23 +173,23 @@ module.exports = router;
  *               busNumber:
  *                 type: string
  *                 description: Bus number to book a seat on
- *                 example: "CCC-7777"
+ *                 example: "XYZ-1234"
  *               seatNumber:
  *                 type: integer
  *                 description: Seat number to book
- *                 example: 11
+ *                 example: 15
  *               passengerName:
  *                 type: string
  *                 description: Name of the passenger
- *                 example: "Abhishek"
+ *                 example: "Nimal"
  *               mobileNumber:
  *                 type: string
  *                 description: Passenger's mobile number
- *                 example: "0771234567"
+ *                 example: "0712345678"
  *               email:
  *                 type: string
  *                 description: Passenger's email address for confirmation
- *                 example: "mudiyansew@gmail.com"
+ *                 example: "nimal@example.com"
  *               boardingPlace:
  *                 type: string
  *                 description: Boarding place of the passenger
@@ -188,7 +202,7 @@ module.exports = router;
  *                 type: string
  *                 format: date-time
  *                 description: Date and time of travel
- *                 example: "2025-02-05T08:30:00Z"
+ *                 example: "2025-03-10T09:00:00Z"
  *     responses:
  *       201:
  *         description: Seat booked successfully, and a confirmation email is sent.
@@ -205,19 +219,19 @@ module.exports = router;
  *                   properties:
  *                     busNumber:
  *                       type: string
- *                       example: "CCC-7777"
+ *                       example: "XYZ-1234"
  *                     seatNumber:
  *                       type: integer
- *                       example: 11
+ *                       example: 15
  *                     passengerName:
  *                       type: string
- *                       example: "Abhishek"
+ *                       example: "Nimal"
  *                     mobileNumber:
  *                       type: string
- *                       example: "0771234567"
+ *                       example: "0712345678"
  *                     email:
  *                       type: string
- *                       example: "mudiyansew@gmail.com"
+ *                       example: "nimal@example.com"
  *                     boardingPlace:
  *                       type: string
  *                       example: "Colombo"
@@ -227,16 +241,16 @@ module.exports = router;
  *                     date:
  *                       type: string
  *                       format: date-time
- *                       example: "2025-02-05T08:30:00Z"
+ *                       example: "2025-03-10T09:00:00Z"
  *                     transactionId:
  *                       type: string
- *                       example: "a9029eebdff54ccd"
+ *                       example: "txn1234567890"
  *                     cancellationToken:
  *                       type: string
- *                       example: "98b7af26135114a451a4434182a8b115"
+ *                       example: "can7894561230"
  *                     price:
  *                       type: number
- *                       example: 1200
+ *                       example: 1800
  *       400:
  *         description: Seat already booked, payment failed, or price not found.
  *       404:

@@ -36,8 +36,10 @@ module.exports = router;
  *             properties:
  *               email:
  *                 type: string
+ *                 example: operator@example.com
  *               password:
  *                 type: string
+ *                 example: strongpassword123
  *     responses:
  *       200:
  *         description: Login successful
@@ -48,19 +50,32 @@ module.exports = router;
  *               properties:
  *                 token:
  *                   type: string
+ *                   example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
  *                 operator:
  *                   type: object
  *                   properties:
  *                     id:
  *                       type: string
+ *                       example: 98765abcde12345
  *                     name:
  *                       type: string
+ *                       example: John Doe
  *                     email:
  *                       type: string
+ *                       example: operator@example.com
  *                     role:
  *                       type: string
+ *                       example: operator
  *       400:
  *         description: Invalid credentials
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: Invalid email or password
  */
 
 /**
@@ -78,8 +93,37 @@ module.exports = router;
  *           application/json:
  *             schema:
  *               type: object
+ *               properties:
+ *                 id:
+ *                   type: string
+ *                   example: 98765abcde12345
+ *                 name:
+ *                   type: string
+ *                   example: John Doe
+ *                 email:
+ *                   type: string
+ *                   example: operator@example.com
+ *                 role:
+ *                   type: string
+ *                   example: operator
  *       404:
  *         description: Operator not found
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: Operator profile not found
  *       500:
  *         description: Server error
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: An unexpected error occurred
  */
