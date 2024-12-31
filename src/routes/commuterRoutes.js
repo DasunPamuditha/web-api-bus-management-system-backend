@@ -12,7 +12,7 @@ const {
 router.get('/buses', searchBuses);
 
 // Get seats for a bus
-router.get('/add-seats', getSeats);
+router.get('/available-seats', getSeats);
 
 router.get('/available-buses', searchAvailableBuses);
 
@@ -32,7 +32,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /commuters/buses:
+ * /tp/commuters/buses:
  *   get:
  *     summary: Search for available buses
  *     tags: [Commuter]
@@ -107,7 +107,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /commuters/seats:
+ * /tp/commuters/available-seats:
  *   get:
  *     summary: Get seat availability
  *     tags: [Commuter]
@@ -144,7 +144,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /commuters/book-with-payment:
+ * /tp/commuters/book-and-pay:
  *   post:
  *     summary: Book a seat with payment
  *     tags: [Commuter]

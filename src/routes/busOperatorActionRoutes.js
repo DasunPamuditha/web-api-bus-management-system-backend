@@ -29,7 +29,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /bus-operators/actions/schedules:
+ * /tp/bus-operators/actions/schedules:
  *   get:
  *     summary: View schedules for operator's buses
  *     tags: [BusOperatorActions]
@@ -75,7 +75,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /bus-operators/actions/bookings:
+ * /tp/bus-operators/actions/bookings:
  *   get:
  *     summary: View seat bookings for operator's buses
  *     tags: [BusOperatorActions]
@@ -121,7 +121,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /bus-operators/actions/reassign-bus:
+ * /tp/bus-operators/actions/reassign-bus:
  *   put:
  *     summary: Reassign a bus in a schedule
  *     tags: [BusOperatorActions]

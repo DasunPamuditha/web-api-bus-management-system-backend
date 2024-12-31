@@ -23,7 +23,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /schedules:
+ * /tp/schedules/create:
  *   post:
  *     summary: Create a schedule
  *     tags: [Schedule]
@@ -78,7 +78,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /schedules:
+ * /tp/schedules/view:
  *   get:
  *     summary: Get all schedules
  *     tags: [Schedule]
@@ -95,7 +95,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /schedules/{id}:
+ * /tp/schedules/update/{id}:
  *   put:
  *     summary: Update a schedule
  *     tags: [Schedule]

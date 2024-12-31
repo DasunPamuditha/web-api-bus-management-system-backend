@@ -21,7 +21,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /api/admin/login:
+ * /tp/admin/login:
  *   post:
  *     summary: Admin login
  *     tags: [Admin]
@@ -64,7 +64,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /api/admin/profile:
+ * /tp/admin/profile:
  *   get:
  *     summary: Get admin profile
  *     tags: [Admin]

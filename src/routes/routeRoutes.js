@@ -26,7 +26,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /routes:
+ * /tp/routes/add-route:
  *   post:
  *     summary: Create a route
  *     tags: [Route]
@@ -73,7 +73,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /routes:
+ * /tp/routes/view:
  *   get:
  *     summary: Get all routes or filter by criteria
  *     tags: [Route]
@@ -120,7 +120,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /routes/{id}:
+ * /tp/routes/update/{id}:
  *   put:
  *     summary: Update a route
  *     tags: [Route]
@@ -217,7 +217,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /routes/{id}:
+ * /tp/routes/delete/{id}:
  *   delete:
  *     summary: Delete a route by routeId
  *     tags: [Route]
