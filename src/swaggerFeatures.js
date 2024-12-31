@@ -4,20 +4,21 @@ const swaggerOptions = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'Bus Management System API',
+      title: 'Bus Management System API - Backend',
       version: '1.0.0',
-      description: 'API documentation for the Bus Management System',
+      description: 'Bus Management System - API documentation',
     },
     servers: [
-      {
-        url: 'http://localhost:5000',
-        description: 'Local Development Server',
-      },
-      {
-        url: 'web-api-bus-management-system-ba-production.up.railway.app',
-        description: 'Deployed Server',
-      },
-    ],
+        {
+          url: 'http://localhost:5000',
+          description: 'Local Development Server',
+        },
+        {
+          url: 'https://web-api-bus-management-system-ba-production-a0cd.up.railway.app',
+          description: 'Deployed Server',
+        },
+      ],
+      
     components: {
       securitySchemes: {
         bearerAuth: {
