@@ -14,7 +14,7 @@ const swaggerOptions = {
           description: 'Local Development Server',
         },
         {
-          url: 'https://web-api-bus-management-system-ba-production-a0cd.up.railway.app',
+          url: 'https://web-api-bus-management-system-ba-production.up.railway.app',
           description: 'Deployed Server',
         },
       ],
